@@ -39,4 +39,12 @@ totoloco_now_playing([
 'genre': '',
 'date': 1264220854
 }
+,{
+'title': 'Jesus, el de la Cruz',
+'artist': 'Las Manos de Filippi',
+'album': 'Las Manos Santas van a Misa',
+'track': '06',
+'genre': 'combativo',
+'date': 1264253694
+}
 ]);
