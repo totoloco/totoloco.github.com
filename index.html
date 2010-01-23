@@ -16,17 +16,38 @@
   <h1><a href="/">totoloco</a></h1>
   <h2><a href="http://wikigithub.com/totoloco/now_playing/">json mpd now playing</a></h2>
 
+  <div id="songs">
+  </div>
+
   <hr width="75%" />
 
   <p>
-  Created at: <i>enero 01, 2010</i>
+  Created at: <i>enero 23, 2010</i>
   </p>
 
   <address>
    <a href="http://ushcompu.com.ar">&lt;ushcompu&gt;</a>
   </address>
-  <script type="text/javascript" src="./jquery.js"></script>
-  <script type="text/javascript" src="./main.js"></script>
+  <!-- script type="text/javascript" src="./jquery.js"></script -->
+  <script type="text/javascript">
+    function totoloco_now_playing(data) {
+      var last = data.length - 1;
+      if (last >= 0) {
+        var div = document.getElementById('songs');
+        var fecha = s = artist = title = album = d = '';
+        for (var i = last; last >= 0; last--) {
+          title  = data[i].title;
+          artist = data[i].artist;
+          album  = data[i].album;
+          d = new Date(data[i].date * 1000);
+          fecha = String(d.getFullYear()) + String(d.getMonth()+1) + String(d.getDate()) + ' ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
+          s += '<div>' + title + ' - ' + artist + ' - ' + album + ' @ ' + fecha +'</div>';
+        }
+        div.innerHTML = s;
+      }
+    }
+  </script>
+  <script type="text/javascript" src="./now_playing.js"></script>
  </body>
 </html>
 
