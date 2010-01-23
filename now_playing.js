@@ -47,4 +47,20 @@ totoloco_now_playing([
 'genre': 'combativo',
 'date': 1264253694
 }
+,{
+'title': 'I Want You Soo Hard (Boy's Bad News)',
+'artist': 'Eagles Of Death Metal',
+'album': 'Death By Sexy',
+'track': '01',
+'genre': 'Desert Rock',
+'date': 1264260311
+}
+,{
+'title': 'I Want You Soo Hard (Boy's Bad News)',
+'artist': 'Eagles Of Death Metal',
+'album': 'Death By Sexy',
+'track': '01',
+'genre': 'Desert Rock',
+'date': 1264260404
+}
 ]);
