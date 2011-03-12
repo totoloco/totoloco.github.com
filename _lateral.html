@@ -1,6 +1,17 @@
 <div id="sidebar">
   <ul>
     <li>
+      <h2>Noticias</h2>
+      <ul>
+      {% for post in site.posts %}
+        <li>
+          <a href="{{ post.get_url() }}" title="{{ post.titulo }} @ {{ post.date.strftime('%d/%m/%Y') }}"
+           >{{ post.titulo }}</a>
+        </li>
+      {% endfor %}
+      </dl>
+    </li>
+    <li>
       <h2>Buscar</h2>
       <div id="search" >
         <form method="get" action="http://duckduckgo.com/">

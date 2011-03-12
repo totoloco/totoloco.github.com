@@ -1,0 +1,45 @@
+{% meta %}
+  titulo: Atomik + MongoDB
+  tags: [php, atomik, framework, micro, mongo, mongodb, plugin]
+{% endmeta %}
+{% mark body %}
+  {% filter markdown %}
+![atomik isologo](http://www.atomikframework.com/assets/images/logo.png)
+
+![mongodb isologo](http://media.mongodb.org/logo-mongodb.png)
+
+atomik framework es un, micro, framework en PHP, es excelente para aplicaciones chicas.
+
+Y MongoDB es una base de datos NoSQL, muy sencilla y prá¡ctica.
+
+Quería probar ambas cosas juntas, y decidí hacer un plugin para atomik.
+
+Para usarlo es mas o menos así­:
+
+en plugins dentro de /app/config.php:
+
+    'MongoDB' => array(
+      'admin' => array(
+        'db'   => 'admin', // [opcional] auth database
+        'user' => 'admin', // [opcional] auth username
+        'pass' => 'admin', // [opcional] auth password
+      ),
+      'database' => 'phpmongo',
+    ),
+
+en nuestra acción:
+
+    $collection = MongoDBPlugin::$db->posts;
+    $obj = array( "title" => "Calvin and Hobbes", "author" => "Bill Watterson" );
+    $collection->insert($obj);
+    $cursor = $collection->find();
+
+Y $cursor ya se puede usar en nuestra vista :D
+
+<http://www.atomikframework.com/plugins/show/11/MongoDB>
+
+<http://www.atomikframework.com/>
+
+<http://www.mongodb.org/>
+  {% endfilter %}
+{% endmark %}
